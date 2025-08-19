@@ -1,0 +1,22 @@
+{
+  "name": "work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+     "test": "exec playwright test",
+     "codegen": "exec playwright codegen",
+     "test-chrome": "exec playwright test --project=chromium",
+     "test-firefox": "exec playwright test --project=firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10"
+  }
+ 
+
+}
