@@ -2,6 +2,8 @@ import { test} from "@playwright/test";
 import { LoginScenarios } from "../pages/LoginScenarios";
 import { SortProduct } from "../pages/SortProduct";
 import { CheckoutProcess } from "../pages/CheckoutProcess";
+import dotenv from 'dotenv';
+dotenv.config();
 
 let context;
 let page;
@@ -13,13 +15,15 @@ test.beforeAll(async ({ browser }) => {
 		ignoreHTTPSErrors: true
 	});
 	page = await context.newPage();
+    const rightUser =  process.env.USER_NAME as string;
+    const rightPassword = process.env.PASSWORD as string;
 
     const loginPage = new LoginScenarios(page);
     const credentials = [
         {username: "wrong_1", password: "wrong_1"},
-        {username: "standard_user", password: "wrong_1"},
-        {username: "wrong_1", password: "secret_sauce"},
-        {username: "standard_user", password: "secret_sauce"},
+        {username: rightUser, password: "wrong_2"},
+        {username: "wrong_2", password: rightPassword},
+        {username: rightUser, password: rightPassword},
     ]
 
     let success = false;
