@@ -1,5 +1,4 @@
 import { Page, expect } from '@playwright/test';
-import dontenv from 'dotenv';
 
 export class LoginScenarios {
 
