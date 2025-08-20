@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "test": "exec playwright test",
-     "codegen": "exec playwright codegen",
-     "test-chrome": "exec playwright test --project=chromium",
-     "test-firefox": "exec playwright test --project=firefox"
+    "test": "exec playwright test",
+    "codegen": "exec playwright codegen",
+    "test-chrome": "exec playwright test --project=chromium",
+    "test-firefox": "exec playwright test --project=firefox"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +15,9 @@
   "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.10"
+    "@types/node": "^24.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
   }
- 
-
 }

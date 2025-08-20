@@ -14,7 +14,6 @@ export class SortProduct {
     async sortProductNameAtoZ(){
         await this.page.locator('[data-test="product-sort-container"]').selectOption('az');
         await expect(this.page.locator('[data-test="item-4-title-link"]')).toBeVisible();
-
     }
 
     async sortProductPriceHightoLow(){
